@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DMY=`date +%d%m%Y`
+cd /f/prod/workflow/jira-service
+yarn start |tee logs/service-$DMY.log

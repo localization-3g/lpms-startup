@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DMY=`date +%d%m%Y`
+cd /f/prod/workflow/engine
+https_proxy=http://proxy.sgp.fujixerox.com:8000 
+#pip install -r requirements.txt
+python src/server.py |tee logs/engine-$DMY.log
